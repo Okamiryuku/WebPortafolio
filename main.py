@@ -11,30 +11,9 @@ ckeditor = CKEditor(app)
 Bootstrap5(app)
 
 
-# Register new users into the User database
-@app.route('/register', methods=["GET", "POST"])
-def register():
-    pass
-
-
-@app.route('/login', methods=["GET", "POST"])
-def login():
-    return render_template("login.html")
-
-
 @app.route('/')
-def get_all_posts():
+def home():
     return render_template("index.html")
-
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
-
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
 
 
 if __name__ == "__main__":
