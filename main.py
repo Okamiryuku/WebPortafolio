@@ -14,6 +14,7 @@ db.init_app(app)
 
 
 class Contact(db.Model):
+    __tablename__ = "info"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     email = db.Column(db.String(100))
